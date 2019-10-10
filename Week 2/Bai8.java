@@ -21,11 +21,6 @@ public class Bai8 {
         b = sc.nextDouble();
         System.out.print("Nhap mot so b: ");
         c = sc.nextDouble();
-        double max = a;
-        if(max<b)
-            max = b;
-        if(max<c)
-            max = c;
-        System.out.println("max = " + max);
+        System.out.println("max = " + Math.max(Math.max(a,b),c));
     }
 }
