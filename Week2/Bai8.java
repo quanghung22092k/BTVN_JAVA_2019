@@ -19,7 +19,7 @@ public class Bai8 {
         a = sc.nextDouble();
         System.out.print("Nhap mot so b: ");
         b = sc.nextDouble();
-        System.out.print("Nhap mot so b: ");
+        System.out.print("Nhap mot so c: ");
         c = sc.nextDouble();
         System.out.println("max = " + Math.max(Math.max(a,b),c));
     }
