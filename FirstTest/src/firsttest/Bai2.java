@@ -13,7 +13,7 @@ import java.util.Scanner;
  */
 public class Bai2 {
     
-    static boolean soHoanHao(double x){
+    public static boolean soHoanHao(double x){
         int sum = 0;
         for(int i = 1; i <= x/2; i++){
             if(x%i == 0) 
@@ -25,6 +25,15 @@ public class Bai2 {
         return false;
     }
     
+    private static double[] insertx(double[] a, double x, int n) {
+        int length = a.length;
+        double b[] = new double[length + 1];
+        System.arraycopy(a, 0, b, 0, n);
+        b[n] = x;
+
+        return b;
+   }
+    
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);
@@ -32,7 +41,6 @@ public class Bai2 {
         System.out.print("Nhap so phan tu cua mang: ");
         int n = sc.nextInt();
         double a[] = new double [n];
-        
         System.out.print("Nhap mang: ");
         for (int i = 0; i < n; i++) {
             a[i] = sc.nextDouble();
@@ -57,15 +65,14 @@ public class Bai2 {
         double x = sc.nextDouble();
         if(soHoanHao(x)){
             System.out.println("x la mot so hoan hao");
-            
+            System.out.print("Chen x vao mang: ");
+            a = insertx(a, x, n);
+            for (int i = 0; i <= n; i++) {
+                System.out.print(a[i] + " ");
+            }
         }
         else{
             System.out.println("x khong phai la mot so hoan hao");
         }
-        System.out.print("Mang moi: ");
-        for (int i = 0; i < n; i++) {
-            System.out.print(a[i] + " ");
-        }
-        System.out.println(x);
     }
 }
